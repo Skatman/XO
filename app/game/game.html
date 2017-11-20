@@ -1,0 +1,17 @@
+<div class="board-wrapper">
+  <div ng-controller="gameCtrl as ctrl" class="board">
+    <input type="text" placeholder="Username" ng-model="ctrl.username">
+    <p ng-if="ctrl.message" class="message">{{ctrl.message}}</p>
+    <div ng-repeat="row in ctrl.board track by $index"
+      class="row">
+      <div class="cell" ng-model="row[0]" ng-click="ctrl.cellClick($event, $index, 0)">
+      </div>
+      <div class="cell" ng-model="row[1]" ng-click="ctrl.cellClick($event, $index, 1)">
+      </div>
+      <div class="cell" ng-model="row[2]" ng-click="ctrl.cellClick($event, $index, 2)">
+      </div>
+    </div>
+    <button ng-click="ctrl.refresh()">New Game</button>
+    <button ng-click="ctrl.deleteUser()">DELETE</button>
+  </div>
+</div>

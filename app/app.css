@@ -23,3 +23,60 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background: lightblue;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  vertical-align: top;
+}
+
+.row {
+  font-size: 0;
+}
+
+.board {
+  position: absolute;
+  display: inline-block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 156px;
+  height: 156px;
+  text-align: center;
+}
+
+.board-wrapper {
+  position:relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cell.x::after {
+  content: 'X';
+}
+
+.cell.y::after {
+  content: 'O';
+}
+
+.message {
+  position: absolute;
+  text-align: center;
+  top: -70px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.board button {
+  margin-top: 30px;
+}
